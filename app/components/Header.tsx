@@ -1,7 +1,7 @@
-import { link } from 'fs';
 import React from 'react';
+import Link from 'next/link';
 
-const links = ['Services', 'Blog', 'Students'];
+const links = ['Services', 'Blog', 'Students', 'About'];
 
 const Header = () => {
   return (
@@ -26,9 +26,12 @@ const Header = () => {
       <ul className="flex gap-6 list-none text-gray-100 font-semibold">
         {links.map((link) => (
           <li key={link}>
-            <a href="#" className="p-2 hover:bg-gray-700 hover:rounded-md">
+            <Link
+              href={link.toLocaleLowerCase()}
+              className="p-2 hover:bg-gray-700 hover:rounded-md"
+            >
               {link}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
