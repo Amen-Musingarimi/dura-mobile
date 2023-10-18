@@ -26,7 +26,9 @@ const Header = () => {
       <ul className="flex gap-6 list-none text-gray-100 font-semibold">
         {links.map((link) => (
           <li key={link}>
-            <a href="#">{link}</a>
+            <a href="#" className="p-2 hover:bg-gray-700 hover:rounded-md">
+              {link}
+            </a>
           </li>
         ))}
       </ul>
